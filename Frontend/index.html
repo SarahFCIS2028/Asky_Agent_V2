@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+    <title>Asky</title>
+    <meta name="Wikipedia Research Assistant" content="This is our Wikipedia Research & Quick Summary  Assistant">
+    <style></style>
+    <script></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fredoka:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="alert">Question is not answered</section>
+    <nav class="navbar">
+        <div class="left">
+            <a href="index (2) (1).html"><img src="Copilot_20260819_191351.png" alt="" id="logo"></a>
+            <span class="logoName">Asky</span>
+        </div>
+        <label class="mode-switch" >
+            <input type="checkbox" id="mode-toggle" onclick="changeDisplayMode()">
+
+            <span class="mode-slider">
+                <i class="fa-solid fa-sun mode-sun" id="sun"></i>
+                <i class="fa-solid fa-moon mode-moon" id="moon"></i>
+                <span class="mode-circle"></span>
+            </span>
+        </label>
+    </nav>
+    <div class="body">
+        <div class="greeting">
+            <h1>Welcome to Asky</h1>
+            <h4>Wikipedia Research Assistant.</h4>
+        </div>
+        <form id="searchForm">
+            <div class="searchBox">
+                <input id="Search" placeholder="Enter your topic..." required>
+                <button type="submit" id="send"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
+
+        <section class="popularTopics">
+            <div class="topic" id="Artificial Intelligence">
+                <span class="icon"><i class="fa-solid fa-robot"></i></span>
+                Artificial Intelligence
+            </div>
+            <div class="topic" id="Space Exploration">
+                <span class="icon"><i class="fa-solid fa-rocket"></i></span>
+                Space Exploration
+            </div>
+            <div class="topic" id="Climate Change">
+                <span class="icon"><i class="fa-solid fa-cloud-moon-rain"></i></span>
+                Climate Change
+            </div>
+            <div class="topic" id="Olympic champions">
+                <span class="icon"><i class="fa-solid fa-medal"></i></span>
+                Olympic champions
+            </div>
+        </section>
+        <section class="modes">
+
+            <label for="Beginner" id="beg">
+                <input type="radio" value="Beginner" name="level" id="Beginner" class="modeInput"
+                    onclick="changemode('beginner')" checked>
+                <strong class="colorText">Beginner</strong>
+                <div class="iconMode">
+                    <span class="iconLevel"><i class="fa-solid fa-book-open-reader"></i></span>
+                    <p>Easy to read, simple language, Perfect for getting started </p>
+                </div>
+            </label>
+
+
+            <label for="Academic" id="Ac">
+                <input type="radio" value="Academic" name="level" id="Academic" class="modeInput"
+                    onclick="changemode('academic')">
+                <strong class="colorText">Academic</strong>
+
+                <div class="iconMode">
+                    <span class="iconLevel"><i class="fa-solid fa-graduation-cap"></i></span>
+                    <p>in-depth, detailed, and designed for deeper understanding </p>
+                </div>
+            </label>
+
+
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
